@@ -1,0 +1,73 @@
+
+<script>
+// function convertStringToNumber(string,x){
+//       if(arguments.length<2)
+//             x=10;
+//       var chars=string.split('');
+//       var number=0;
+//       var i=0; 
+//     while(i<chars.length&&chars[i]!="."){
+//          number=number*x;
+//          number+=chars[i].codePointAt(0)-"0".codePointAt(0);
+//          i++;
+//     }
+   
+//     if(chars[i]==='.')
+//          i++
+//     var fraction=1;
+//     while(i<chars.length){
+//      fraction=fraction/x; 
+//      number+=(chars[i].codePointAt(0)-"0".codePointAt(0))*fraction;    
+//      i++;
+//     }
+//     return number;
+
+// }
+
+// console.log(convertStringToNumber("10.90"));
+
+
+ function convertNumberToString(number,x){
+      if(arguments.length<2){
+          x=10
+      }
+     var integer=Math.floor(number);
+     var fraction=number-integer;
+     var string="";
+      while(integer>0){
+           string= String(integer%x)+string;
+           integer=Math.floor(integer/x);
+      }
+      return string+fraction;
+ }
+console.log(convertNumberToString(10.2));
+
+ console.log(1%10);
+ console.log(1/10);
+ console.log(Math.floor(0.01));
+ console.log(34%10);
+ console.log(34/10);
+ 
+
+
+
+
+function  convertNumberToString(number,x){
+
+var integer=Math.floor(number);
+var fraction=number-integer;
+var string=""
+while(integer>0){
+  string=string(integer%4)+string;
+
+// 思路   几默几相当于，先找到他的各位数的值是什么。
+         // 在让他除以10,取他的整数，代表着他的十位数上是啥！
+         //下次循环在累加和拼接字符串
+    integer=Math.floor(integer/x); 
+}
+} 
+
+
+
+
+</script>
